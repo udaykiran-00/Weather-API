@@ -7,6 +7,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set("view-engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname));
+const cors = require("cors");
+app.use(cors());
+
 app.listen(3200,function(){
     console.log("server has started");
 });
